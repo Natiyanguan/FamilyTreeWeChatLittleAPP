@@ -1,0 +1,15 @@
+.tree-node { display:flex; flex-direction:column; align-items:center; margin:40rpx 0; position:relative; }
+.couple-row { display:flex; align-items:center; justify-content:center; margin-bottom:20rpx; }
+.member { display:flex; flex-direction:column; align-items:center; }
+.member.clickable { cursor: pointer; } /* 添加点击样式提示 */
+.avatar.male { width:100rpx; height:140rpx; border-radius:8rpx; border:2rpx solid #333; object-fit:cover; }
+.avatar.female { width:100rpx; height:140rpx; border-radius:50%; border:2rpx solid #e91e63; object-fit:cover; }
+.name { margin-top:10rpx; font-size:26rpx; text-align:center; }
+.highlight { font-size:30rpx; font-weight:bold; color:#f44336; }
+.marriage-link { margin:0 40rpx; color:#666; }
+.children-wrapper { display:flex; flex-direction:column; align-items:center; margin-top:10rpx; }
+.vertical-line { width:2rpx; height:40rpx; background:#666; }
+.children-row-scroll { width:100%; overflow-x:scroll; }
+.children-row { display:flex; flex-direction:row; justify-content:flex-start; margin-top:20rpx; }
+.child-item { display:flex; flex-direction:column; align-items:center; margin:0 30rpx; position:relative; }
+.horizontal-line { position:absolute; top:-20rpx; width:100%; height:2rpx; background:#666; }

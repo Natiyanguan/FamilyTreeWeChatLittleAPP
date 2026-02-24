@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "family-node": "/components/family-node/family-node"
+  }
+}

@@ -1,0 +1,28 @@
+.container {
+  padding: 20rpx;
+}
+
+.search-bar {
+  margin-bottom: 20rpx;
+}
+
+.tree-container {
+  height: 100vh;
+}
+
+.node {
+  margin-left: 40rpx;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+
+.avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
