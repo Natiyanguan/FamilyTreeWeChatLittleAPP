@@ -3,7 +3,26 @@
 }
 
 .search-bar {
+  display: flex;
+  align-items: center;
   margin-bottom: 20rpx;
+  gap: 20rpx;
+}
+
+.search-bar input {
+  flex: 1;
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  padding: 16rpx 24rpx;
+  font-size: 28rpx;
+}
+
+.search-btn {
+  padding: 16rpx 32rpx;
+  font-size: 28rpx;
+  background-color: #07c160;
+  color: white;
+  border-radius: 8rpx;
 }
 
 .tree-container {

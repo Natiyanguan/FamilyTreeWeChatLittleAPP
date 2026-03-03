@@ -19,7 +19,7 @@ const marriages = [
   { id: "m11", husband: "11", wife: "11s", children: ["33", "34", "35", "36", "37"], type: "marriage" },
   { id: "m14", husband: "14", wife: "14s", children: ["54", "55", "56"], type: "marriage" },
   { id: "m19", husband: "19", wife: "19s", children: ["38", "39", "40", "41", "42", "43", "44"], type: "marriage" },
-  { id: "m22", husband: "22", wife: "22s", children: [""], type: "marriage" },
+  { id: "m22", husband: "22", wife: "22s", children: [], type: "marriage" },
   { id: "m25", husband: "25", wife: "25s", children: ["45", "46", "47", "48"], type: "marriage" },
   { id: "m26", husband: "26", wife: "26s", children: ["49", "50", "51", "52", "53"], type: "marriage" },
   // 五代
@@ -57,6 +57,7 @@ const marriages = [
   // 七代
   { id: "m96", husband: "96", wife: "96s", children: ["128", "129"], type: "marriage" },
   { id: "m97", husband: "97", wife: "97s", children: ["130", "131", "132"], type: "marriage" },
+  { id: "m119", husband: "119", wife: "119s", children: [], type: "marriage" },
   { id: "m121", husband: "121", wife: "121s", children: ["133"], type: "marriage" },
   { id: "m122", husband: "122", wife: "122s", children: ["134"], type: "marriage" },
   { id: "m124", husband: "124", wife: "124s", children: ["135", "136"], type: "marriage" },

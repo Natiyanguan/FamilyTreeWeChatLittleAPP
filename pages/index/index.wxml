@@ -4,8 +4,12 @@
 <view class="search-bar">
   <input
     placeholder="输入名字搜索 <支持单字>"
+    value="{{searchKey}}"
     bindinput="onSearchInput"
+    bindconfirm="onSearchConfirm"
+    confirm-type="search"
   />
+  <button class="search-btn" bindtap="onSearchConfirm">搜索</button>
 </view>
 
 <!-- 外层纵向滚动，滚动整棵树 -->

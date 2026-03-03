@@ -174,7 +174,7 @@ const people = {
   "116": { id: "116", name: "李国辰", gender: "male", type: "member", avatar: "", adopted: false },
   "117": { id: "117", name: "李欣婷", gender: "female", type: "member", avatar: "", adopted: false },
   "118": { id: "118", name: "李莉", gender: "female", type: "member", avatar: "", adopted: false },
-  "119": { id: "119", name: "李智", gender: "female", type: "member", avatar: "", adopted: false },
+  "119": { id: "119", name: "李智", gender: "male", type: "member", avatar: "", adopted: false },
   "119s": { id: "119s", name: "魏晓烨", gender: "female", type: "spouse", avatar: "", adopted: false },
   "120": { id: "120", name: "李甜梦", gender: "female", type: "member", avatar: "", adopted: false },
   "121": { id: "121", name: "李游", gender: "male", type: "member", avatar: "", adopted: false },

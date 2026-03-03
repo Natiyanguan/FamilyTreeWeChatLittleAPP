@@ -36,13 +36,20 @@ Page({
 
   onSearchInput(e) {
     const value = e.detail.value.trim()
-    this.resetTree(this.data.treeData)
-    if (!value) {
+    this.setData({
+      searchKey: value
+    })
+  },
+
+  onSearchConfirm() {
+    if (!this.data.searchKey) {
+      this.resetTree(this.data.treeData)
       this.setData({ treeData: this.data.treeData })
       return
     }
+    
     const path = []
-    this.searchAndMark(this.data.treeData, value, path)
+    this.searchAndMark(this.data.treeData, this.data.searchKey, path)
     this.setData({ treeData: this.data.treeData }, () => {
       if (path.length) this.scrollToNode(path[path.length - 1])
     })
@@ -63,15 +70,26 @@ Page({
   },
 
   searchAndMark(node, keyword, path) {
+    if (!node || !node.id) return false
+    
     path.push(node.id)
     let found = false
 
-    if (node.name.includes(keyword)) { node.highlight = true; found = true }
+    if (node.name && node.name.includes(keyword)) { 
+      node.highlight = true
+      found = true 
+    }
 
     if (node.marriages && node.marriages.length) {
       for (let m of node.marriages) {
-        if (m.husband.name.includes(keyword)) { m.husband.highlight = true; found = true }
-        if (m.wife && m.wife.name.includes(keyword)) { m.wife.highlight = true; found = true }
+        if (m.husband.name && m.husband.name.includes(keyword)) { 
+          m.husband.highlight = true
+          found = true 
+        }
+        if (m.wife && m.wife.name && m.wife.name.includes(keyword)) { 
+          m.wife.highlight = true
+          found = true 
+        }
         for (let child of m.children) {
           if (this.searchAndMark(child, keyword, path)) found = true
         }
