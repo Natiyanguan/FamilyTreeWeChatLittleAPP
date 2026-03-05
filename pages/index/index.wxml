@@ -12,11 +12,22 @@
   <button class="search-btn" bindtap="onSearchConfirm">搜索</button>
 </view>
 
+<!-- 缩放控制 -->
+<view class="zoom-controls">
+  <button class="zoom-btn" bindtap="zoomOut">-</button>
+  <text class="zoom-text">缩放: {{Math.floor(scale * 100)}}%</text>
+  <button class="zoom-btn" bindtap="zoomIn">+</button>
+  <button class="reset-btn" bindtap="resetZoom">重置</button>
+</view>
+
 <!-- 外层纵向滚动，滚动整棵树 -->
 <scroll-view
   scroll-y="true"
   class="tree-container"
   scroll-into-view="{{targetId}}"
+  bindtouchstart="onTouchStart"
+  bindtouchmove="onTouchMove"
+  bindtouchend="onTouchEnd"
 >
   <block wx:if="{{treeData}}">
     <!-- 横向滚动包裹家族树主体 -->
@@ -25,7 +36,9 @@
       scroll-with-animation="true"
       style="width:100%; white-space:nowrap;"
     >
-      <view style="display:inline-block;">
+      <view
+        style="display:inline-block; transform: scale({{scale}}); transform-origin: 0 0;"
+      >
         <family-node
           node="{{treeData}}"
           bind:toggle="onToggleExpand"

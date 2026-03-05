@@ -6,7 +6,7 @@
   <view class="marriage-container">
     <!-- 婚姻标签 -->
     <view class="marriage-label">
-      婚姻 {{item.id}}
+      婚姻
     </view>
 
     <!-- 夫妻行 -->
