@@ -8,7 +8,8 @@ const people = {
   "2s": { id: "2s", name: "不详", gender: "female", type: "spouse", avatar: "", adopted: false },
   "3": { id: "3", name: "李二德", gender: "male", type: "member", avatar: "", adopted: false },
   "3s": { id: "3s", name: "不详", gender: "female", type: "spouse", avatar: "", adopted: false },
-  "3s-2": { id: "3s-2", name: "霍氏", gender: "female", type: "spouse", avatar: "", adopted: false },
+  "3-2": { id: "3-2", name: "李二德", gender: "male", type: "member", avatar: "", adopted: false },
+  "3-2s": { id: "3-2s", name: "霍氏", gender: "female", type: "spouse", avatar: "", adopted: false },
   "4": { id: "4", name: "李大德", gender: "male", type: "member", avatar: "", adopted: false },
   "4s": { id: "4s", name: "不详", gender: "female", type: "spouse", avatar: "", adopted: false },
   // 三代

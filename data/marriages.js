@@ -2,11 +2,11 @@
 // 婚姻关系及子女
 const marriages = [
     // 一代
-  { id: "m1", husband: "1", wife: "1s", children: ["2", "3", "4"], type: "marriage" },
+  { id: "m1", husband: "1", wife: "1s", children: ["2", "3", "3-2", "4"], type: "marriage" },
     // 二代
   { id: "m2", husband: "2", wife: "2s", children: ["5"], type: "marriage" },
   { id: "m3", husband: "3", wife: "3s", children: ["6"], type: "marriage" },
-  { id: "m3-2", husband: "3", wife: "3s-2", children: ["7"], type: "marriage" },
+  { id: "m3-2", husband: "3-2", wife: "3-2s", children: ["7"], type: "marriage" },  // 一个人有两个婚姻的情况下，将男方的信息提供两次即可
   { id: "m4", husband: "4", wife: "4s", children: ["8"], type: "marriage" },
     // 三代
   { id: "m5", husband: "5", wife: "5s", children: ["9", "10"], type: "marriage" },
