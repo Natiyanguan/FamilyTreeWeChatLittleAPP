@@ -34,7 +34,7 @@
   <!-- 子节点 -->
   <block wx:if="{{node.expanded && item.children.length > 0}}">
     <view class="children-wrapper">
-      <view class="vertical-line"></view>
+      <view class="parent-brace"></view>
       <scroll-view scroll-x="true" scroll-with-animation="true" class="children-row-scroll">
         <view class="children-row">
           <block wx:for="{{item.children}}" wx:key="id" wx:for-item="child">
