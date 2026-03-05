@@ -1,15 +1,129 @@
 .tree-node { display:flex; flex-direction:column; align-items:center; margin:40rpx 0; position:relative; }
-.couple-row { display:flex; align-items:center; justify-content:center; margin-bottom:20rpx; }
-.member { display:flex; flex-direction:column; align-items:center; }
-.member.clickable { cursor: pointer; } /* 添加点击样式提示 */
-.avatar.male { width:100rpx; height:140rpx; border-radius:8rpx; border:2rpx solid #333; object-fit:cover; }
-.avatar.female { width:100rpx; height:140rpx; border-radius:50%; border:2rpx solid #e91e63; object-fit:cover; }
-.name { margin-top:10rpx; font-size:26rpx; text-align:center; }
-.highlight { font-size:30rpx; font-weight:bold; color:#f44336; }
-.marriage-link { margin:0 40rpx; color:#666; }
-.children-wrapper { display:flex; flex-direction:column; align-items:center; margin-top:10rpx; }
-.vertical-line { width:2rpx; height:40rpx; background:#666; }
-.children-row-scroll { width:100%; overflow-x:scroll; }
-.children-row { display:flex; flex-direction:row; justify-content:flex-start; margin-top:20rpx; }
-.child-item { display:flex; flex-direction:column; align-items:center; margin:0 30rpx; position:relative; }
-.horizontal-line { position:absolute; top:-20rpx; width:100%; height:2rpx; background:#666; }
+.couple-row { display:flex; align-items:center; justify-content:center; margin-bottom:30rpx; }
+.member { display:flex; flex-direction:column; align-items:center; padding: 15rpx; }
+.member.clickable { cursor: pointer; }
+.avatar.male { width:120rpx; height:160rpx; border-radius:12rpx; border:4rpx solid #333; object-fit:cover; box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.15); }
+.avatar.female { width:120rpx; height:160rpx; border-radius:50%; border:4rpx solid #e91e63; object-fit:cover; box-shadow: 0 4rpx 12rpx rgba(233,30,99,0.2); }
+.name { margin-top:15rpx; font-size:28rpx; text-align:center; font-weight: 500; }
+.highlight { font-size:32rpx; font-weight:bold; color:#f44336; }
+
+/* 婚姻关系连接符 */
+.marriage-link {
+  margin:0 30rpx;
+  color:#07c160;
+  font-size: 40rpx;
+  font-weight: bold;
+  padding: 10rpx 20rpx;
+  background: linear-gradient(135deg, rgba(7,193,96,0.1), rgba(7,193,96,0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60rpx;
+  min-height: 60rpx;
+  box-shadow: 0 2rpx 8rpx rgba(7,193,96,0.2);
+}
+
+/* 婚姻容器 */
+.marriage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 6rpx dashed #07c160;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin: 30rpx 0;
+  background: linear-gradient(135deg, rgba(7,193,96,0.08), rgba(7,193,96,0.02));
+  position: relative;
+  min-width: 450rpx;
+  box-shadow: 0 8rpx 24rpx rgba(7,193,96,0.15);
+  transition: all 0.3s ease;
+}
+
+.marriage-container::before {
+  content: '';
+  position: absolute;
+  top: -6rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 6rpx;
+  background: #07c160;
+  border-radius: 3rpx;
+}
+
+.marriage-container::after {
+  content: '';
+  position: absolute;
+  bottom: -6rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 6rpx;
+  background: #07c160;
+  border-radius: 3rpx;
+}
+
+.marriage-label {
+  font-size: 24rpx;
+  color: #07c160;
+  font-weight: 600;
+  margin-bottom: 15rpx;
+  padding: 8rpx 20rpx;
+  background: rgba(7,193,96,0.1);
+  border-radius: 20rpx;
+  border: 2rpx solid rgba(7,193,96,0.3);
+}
+
+.children-wrapper {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:40rpx;
+  position: relative;
+  width: 100%;
+}
+
+.vertical-line {
+  width:6rpx;
+  height:60rpx;
+  background: linear-gradient(to bottom, #07c160, #05a855);
+  border-radius: 3rpx;
+  box-shadow: 0 2rpx 4rpx rgba(7,193,96,0.3);
+}
+
+.children-row-scroll {
+  width:100%;
+  overflow-x:scroll;
+  margin-top: 20rpx;
+}
+
+.children-row {
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items: flex-start;
+  padding: 20rpx;
+}
+
+.child-item {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin:0 30rpx;
+  position:relative;
+  min-width: 150rpx;
+}
+
+.horizontal-line {
+  position:absolute;
+  top:-30rpx;
+  width:100%;
+  height:4rpx;
+  background: linear-gradient(to right, #07c160, #05a855);
+  border-radius: 2rpx;
+}
+
+.member:last-child {
+  margin-bottom: 20rpx;
+}

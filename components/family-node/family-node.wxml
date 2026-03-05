@@ -2,29 +2,32 @@
 
 <!-- 显示该节点的所有婚姻关系 -->
 <block wx:for="{{node.marriages}}" wx:key="id">
-  <!-- 调试信息 -->
-  <view style="font-size: 12px; color: #666; margin-bottom: 5px;">
-    婚姻 {{item.id}}: {{item.husband.name}} & {{item.wife.name}}
-  </view>
-
-  <!-- 夫妻行 -->
-  <view class="couple-row" bindtap="handleCoupleTap" data-husband-id="{{item.husband.id}}" data-wife-id="{{item.wife.id}}">
-    <!-- 丈夫 -->
-    <view class="member">
-      <image class="avatar {{item.husband.gender}}" src="{{item.husband.avatar || '/images/default.jpg'}}" />
-      <text class="name {{item.husband.highlight ? 'highlight' : ''}}">
-        {{item.husband.name}}{{item.husband.adopted ? '（过继）' : ''}}
-      </text>
+  <!-- 婚姻容器 -->
+  <view class="marriage-container">
+    <!-- 婚姻标签 -->
+    <view class="marriage-label">
+      婚姻 {{item.id}}
     </view>
+
+    <!-- 夫妻行 -->
+    <view class="couple-row" bindtap="handleCoupleTap" data-husband-id="{{item.husband.id}}" data-wife-id="{{item.wife.id}}">
+      <!-- 丈夫 -->
+      <view class="member">
+        <image class="avatar {{item.husband.gender}}" src="{{item.husband.avatar || '/images/default.jpg'}}" />
+        <text class="name {{item.husband.highlight ? 'highlight' : ''}}">
+          {{item.husband.name}}{{item.husband.adopted ? '（过继）' : ''}}
+        </text>
+      </view>
 
     <view class="marriage-link">⇄</view>
 
-    <!-- 妻子 -->
-    <view class="member">
-      <image class="avatar {{item.wife.gender}}" src="{{item.wife.avatar || '/images/default.jpg'}}" />
-      <text class="name {{item.wife.highlight ? 'highlight' : ''}}">
-        {{item.wife.name}}{{item.wife.adopted ? '（过继）' : ''}}
-      </text>
+      <!-- 妻子 -->
+      <view class="member">
+        <image class="avatar {{item.wife.gender}}" src="{{item.wife.avatar || '/images/default.jpg'}}" />
+        <text class="name {{item.wife.highlight ? 'highlight' : ''}}">
+          {{item.wife.name}}{{item.wife.adopted ? '（过继）' : ''}}
+        </text>
+      </view>
     </view>
   </view>
 
